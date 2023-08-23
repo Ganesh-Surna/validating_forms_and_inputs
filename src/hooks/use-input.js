@@ -15,7 +15,11 @@ const useInput=(validate)=>{
     const handleChange=(event)=>{
         setIsTouched(true);
         setInputValue(event.target.value);
-      };
+    };
+    
+    const setTouchedFun=()=>{
+      setIsTouched(true);
+    };
 
     const resetValue=()=>{
         setInputValue("");
@@ -28,6 +32,7 @@ const useInput=(validate)=>{
         hasError,
         handleBlur,
         handleChange,
+        setTouchedFun,
         resetValue,
     };
 
